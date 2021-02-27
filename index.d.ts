@@ -10,7 +10,7 @@ declare var StorageArea: {
 
 /**
  * Main differences to the working draft:
- * - Type parameter for backing store.
+ * - Unknown backing store.
  * - Added unspecified options paramter to all methods. 
  *   This way users can provide extra data to the underlying implementation without type casting.
  */
@@ -24,6 +24,6 @@ export interface StorageArea {
   values<T>(opts?: Options): AsyncIterableIterator<T>;
   entries<T>(opts?: Options): AsyncIterableIterator<[Key, T]>;
 
-  backingStore<S = any>(): S;
+  backingStore(): unknown;
 }
 
