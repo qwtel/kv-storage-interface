@@ -1,6 +1,6 @@
 {
   "name": "kv-storage-interface",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TypeScript type definitions for KV Storage",
   "types": "index.d.ts",
   "scripts": {
