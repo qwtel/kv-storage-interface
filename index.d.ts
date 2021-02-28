@@ -15,10 +15,10 @@ declare var StorageArea: {
  *   This way users can provide extra data to the underlying implementation without type casting.
  */
 export interface StorageArea {
-  set<T>(key: AllowedKey, value: T, opts?: Options): Promise<void> ;
-  get<T>(key: AllowedKey, opts?: Options): Promise<T> ;
-  delete(key: AllowedKey, opts?: Options): Promise<void> ;
-  clear(opts?: Options): Promise<void> ;
+  set<T>(key: AllowedKey, value: T, opts?: Options): Promise<void>;
+  get<T>(key: AllowedKey, opts?: Options): Promise<T | undefined>;
+  delete(key: AllowedKey, opts?: Options): Promise<void>;
+  clear(opts?: Options): Promise<void>;
 
   keys(opts?: Options): AsyncIterableIterator<Key>;
   values<T>(opts?: Options): AsyncIterableIterator<T>;
