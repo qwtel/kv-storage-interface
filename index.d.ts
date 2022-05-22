@@ -3,7 +3,7 @@ export type Key = string | number | Date | ArrayBuffer | Key[];
 
 export type Options = Record<string, any>;
 
-declare var StorageArea: {
+declare const StorageArea: {
   prototype: StorageArea;
   new(name: string, opts?: Options): StorageArea;
 };
